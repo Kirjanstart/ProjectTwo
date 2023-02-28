@@ -32,8 +32,8 @@ else:
 
 # Аналогично для другой точки
 point_2 = (30, 30)
-l2 = ((point_2[0] - center[0]) ** 2 + (point_2[1] - center[1]) ** 2) ** 0.5
-if l2 <= 42:
+l3 = ((point_2[0] - center[0]) ** 2 + (point_2[1] - center[1]) ** 2) ** 0.5
+if l3 <= 42:
     print(True)
 else:
     print(False)
