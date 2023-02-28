@@ -22,6 +22,8 @@ violator_songs_list = [
 
 # TODO здесь ваш код
 
+
+
 # Есть словарь песен группы Depeche Mode
 violator_songs_dict = {
     'World in My Eyes': 4.76,
@@ -39,3 +41,5 @@ violator_songs_dict = {
 #   А другие три песни звучат ХХХ минут
 
 # TODO здесь ваш код
+lenght_songs = violator_songs_dict['Sweetest Perfection'] + violator_songs_dict['Policy of Truth'] + violator_songs_dict['Blue Dress']
+print('А другие три песни звучат', round(lenght_songs, 2), 'минут')
