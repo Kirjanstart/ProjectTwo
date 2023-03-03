@@ -21,9 +21,10 @@ violator_songs_list = [
 # Лучше заранее вычислить необходимое, а затем в print(xxx, yyy, zzz)
 
 # TODO здесь ваш код
-print(violator_songs_list.index(['Halo', 4.9]))
 
-#print('Три песни звучат', round(lenght_songs, 2), 'минут')
+#print(violator_songs_list.index(['Halo', 4.9]))
+lenght_songs = violator_songs_list[3][1] + violator_songs_list[5][1] + violator_songs_list[8][1]
+print('Три песни звучат', round(lenght_songs, 2), 'минут')
 
 
 # Есть словарь песен группы Depeche Mode
