@@ -30,5 +30,3 @@ print(garden_set - (garden_set & meadow_set))
 # выведите на консоль те, которые растут на лугу, но не растут в саду
 # TODO здесь ваш код
 print(meadow_set - (garden_set & meadow_set))
-
-
