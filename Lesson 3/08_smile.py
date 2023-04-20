@@ -2,12 +2,12 @@
 
 # (определение функций)
 import simple_draw as sd
-
+import random
 # Написать функцию отрисовки смайлика в произвольной точке экрана
 # Форма рожицы-смайлика на ваше усмотрение
 # Параметры функции: кордината X, координата Y, цвет.
 # Вывести 10 смайликов в произвольных точках экрана.
-
+sd.resolution = (1200, 600)
 # TODO здесь ваш код
 def smile(coordinate_x, coordinate_y, color):
     point = sd.get_point(coordinate_x, coordinate_y)
@@ -26,8 +26,9 @@ def smile(coordinate_x, coordinate_y, color):
     sd.circle(center_position=point, radius=50,color=color, width=3)
 
 smile(50, 50, sd.COLOR_DARK_ORANGE)
-
-
-
+for _ in range(100):
+    coordinate_x = random.randint(0, 1200)
+    coordinate_y = random.randint(0, 600)
+    smile(coordinate_x=coordinate_x, coordinate_y=coordinate_y, color=sd.random_color())
 
 sd.pause()
