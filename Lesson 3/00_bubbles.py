@@ -16,8 +16,6 @@ for _ in range(3):
 # TODO здесь ваш код
 def bubble(point, step):
     radius = 50
-    mini_center = point.x(10)
-    sd.circle(center_position=mini_center, radius=10)
     for _ in range(3):
         radius += step
         sd.circle(center_position=point, radius=radius, width=3)

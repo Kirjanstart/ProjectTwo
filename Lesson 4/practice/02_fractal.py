@@ -8,13 +8,14 @@ sd.resolution = (600, 800)
 
 point_0 = sd.get_point(300, 5)
 
+v1 = sd.get_vector(start_point=point_0, angle=90, length=100)
 
 # сделать функцию рисования ветки из заданной точки,
 # заданной длины, с заданным наклоном
-# def branch(point, angle, length):
-#     v1 = sd.get_vector(start_point=point, angle=angle, length=length, width=3)
-#     v1.draw()
-#     return v1.end_point
+def branch(point, angle, length):
+    v1 = sd.get_vector(start_point=point, angle=angle, length=length, width=3)
+    v1.draw()
+    return v1.end_point
 
 # angle_0 = 90
 # length_0 = 200
