@@ -132,6 +132,10 @@ point_1 = sd.get_point(300, 100)
 # pentagram(point=point_1, angle=0, length=300)
 # hexagon(point=point_1, angle=0, length=100)
 nangle(n = 12, point=point_1, angle=0, length=100)
+# for i in range(1, 60):
+#     nangle(n = i, point=point_1, angle=0, length=100)
+
+
 
 
 
