@@ -111,7 +111,7 @@ def hexagon(point, angle, length):
     v12 = sd.get_vector(start_point=v11.end_point, angle=angle + 330, length=length, width=3)
     v12.draw()
 
-def nangle(n, point, angle, length):
+def polygon(n, point, angle, length):
     delta = (360 / n)
     # sumangle = (n-2) * 180
     # delta = sumangle//n
@@ -131,9 +131,9 @@ point_1 = sd.get_point(300, 100)
 # square(point=point_1, angle=0, length=300)
 # pentagram(point=point_1, angle=0, length=300)
 # hexagon(point=point_1, angle=0, length=100)
-nangle(n = 12, point=point_1, angle=0, length=100)
+polygon(n = 12, point=point_1, angle=0, length=100)
 # for i in range(1, 60):
-#     nangle(n = i, point=point_1, angle=0, length=100)
+#     polygon(n = i, point=point_1, angle=0, length=100)
 
 
 
