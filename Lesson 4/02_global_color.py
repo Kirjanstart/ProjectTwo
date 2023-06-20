@@ -16,7 +16,7 @@ sd.resolution = (1200, 600)
 
 # TODO здесь ваш код
 
-def polygon(n, point, angle, length):
+def polygon_color(n, point, angle, length):
     colors = {0: sd.COLOR_RED,
              1: sd.COLOR_ORANGE,
              2: sd.COLOR_YELLOW,
@@ -27,17 +27,17 @@ def polygon(n, point, angle, length):
     delta = (360 / n)
     print('0 : красный', '1 : оранжевый', '2 : желтый', '3 : зеленый', '4 : голубой', '5 : синий', '6 : фиолетовый', sep='\n')
     print('Пожалуйста выберите цвет')
-    polygon_color = int(input())
+    poly_color = int(input())
 
-    while polygon_color not in range(0, 7):
+    while poly_color not in range(0, 7):
         print('Вы ввели неверное значение!')
         print('Пожалуйста выберите цвет!')
-        polygon_color = int(input())
+        poly_color = int(input())
 
     else:
         while n > 0:
             v = sd.get_vector(start_point=point, angle=angle - n * delta, length=length, width=3)
-            v.draw(color=colors[polygon_color])
+            v.draw(color=colors[poly_color])
             n -= 1
             point = v.end_point
 
@@ -45,7 +45,7 @@ def polygon(n, point, angle, length):
 point_1 = sd.get_point(300, 100)
 
 
-polygon(n = 12, point=point_1, angle=0, length=100)
+polygon_color(n = 12, point=point_1, angle=0, length=100)
 
 
 
