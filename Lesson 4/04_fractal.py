@@ -30,39 +30,31 @@ sd.resolution = (1200, 600)
 # TODO здесь ваш код
 
 
-def branch_right(point, angle, length, delta):
-    if length < 10:
+def branch(point, angle, length):
+    if length < 5:
         return
-    v1 = sd.get_vector(start_point=point, angle=angle, length=length, width=3)
+    v1 = sd.get_vector(start_point=point, angle=angle, length=length, width=1)
     v1.draw()
-    next_point_1 = v1.end_point
-    next_angle_1 = angle - delta
-    next_length_1 = length * .75
-    branch_right(point=next_point_1, angle=next_angle_1, length=next_length_1, delta=delta)
-
-def branch_left(point, angle, length, delta):
-    if length < 10:
-        return
-    v2 = sd.get_vector(start_point=point, angle=angle, length=length, width=3)
+    v2 = sd.get_vector(start_point=point, angle=angle, length=length, width=1)
     v2.draw()
+    next_point_1 = v1.end_point
     next_point_2 = v2.end_point
-    next_angle_2 = angle + delta
-    next_length_2 = length * .75
-    branch_left(point=next_point_2, angle=next_angle_2, length=next_length_2, delta=delta)
+    div_angle_1 = sd.random_number(-40, 40) / 100
+    div_angle_2 = sd.random_number(-40, 40) / 100
+    div_length = sd.random_number(-20, 20) / 100
+    next_angle_1 = angle - 30 - (30 * div_angle_1)
+    next_angle_2 = angle + 30 + (30 * div_angle_2)
+    next_length_1 = length * (0.75 + div_length * 0.75)
+    branch(point=next_point_1, angle=next_angle_1, length=next_length_1)
+    branch(point=next_point_2, angle=next_angle_2, length=next_length_1)
 
-def branches(point, angle, length, delta):
-    branch_right(point, angle, length, delta)
-    branch_left(point, angle, length, delta)
+point_0 = sd.get_point(300, -100)
 
-point_0 = sd.get_point(300, 5)
+branch(point=point_0, angle=90, length=150)
+
 
 # for delta in range(0, 51, 10):
 #     branch(point=point_0, angle=90, length=150, delta=delta)
-# for delta in range(-50, 1, 10):
-#     branch(point=point_0, angle=90, length=150, delta=delta)
-
-for delta in range(0, 51, 10):
-    branches(point=point_0, angle=90, length=150, delta=delta)
 
 
 
