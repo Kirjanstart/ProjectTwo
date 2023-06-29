@@ -46,15 +46,19 @@ for length in snowflakes:
     x = sd.random_number(0, 1000)
     while y > 10:
         # sd.clear_screen()
+        delta_x = sd.random_number(-7, 7)
         point = sd.get_point(x, y)
         sd.snowflake(center=point, length=length)
+        # sd.sleep(0.01)
+        # y -= 1
         sd.snowflake(center=point, length=length, color=sd.background_color)
         y -= 1
-        if y < 5:
+        if y <=10:
+            sd.snowflake(center=point, length=length)
             break
-        x += 1
-        # sd.sleep()
+        x += delta_x
         sd.finish_drawing()
+        # sd.sleep(0.01)
         if sd.user_want_exit():
             break
 
