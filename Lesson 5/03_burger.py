@@ -16,3 +16,11 @@
 # Если не хватает инградиентов - создать соответствующие функции в модуле my_burger
 
 # TODO здесь ваш код
+import my_burger as mb
+mb.bread()
+mb.mayonnaise()
+mb.beef()
+mb.cheese()
+mb.tomato()
+mb.pickle()
+mb.assemble()
