@@ -19,6 +19,32 @@
 # Приправить своей фантазией по вкусу (коты? коровы? люди? трактор? что придумается)
 
 # TODO здесь ваш код
+import simple_draw as sd
+import drawing.wall as dw
+import drawing.smile as ds
+import drawing.rainbow as dr
+import drawing.tree as tr
+import drawing.snowfall as sf
+
+point_0 = sd.get_point(300, -100)
+dw.brick_wall()
+ds.smile(50, 50, sd.COLOR_DARK_ORANGE)
+dr.rainbow()
+tr.branch(point=point_0, angle=90, length=150)
+sf.snow()
+
+
+
+
+
+sd.pause()
+
+
+
+
+
+
+
 
 # Усложненное задание (делать по желанию)
 # Анимировать картину.

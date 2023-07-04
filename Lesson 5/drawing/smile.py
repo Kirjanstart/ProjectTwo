@@ -25,10 +25,10 @@ def smile(coordinate_x, coordinate_y, color):
     sd.circle(center_position=left_point, radius=5,color=color, width=3)
     sd.circle(center_position=point, radius=50,color=color, width=3)
 
-smile(50, 50, sd.COLOR_DARK_ORANGE)
-for _ in range(100):
-    coordinate_x = random.randint(0, 1200)
-    coordinate_y = random.randint(0, 600)
-    smile(coordinate_x=coordinate_x, coordinate_y=coordinate_y, color=sd.random_color())
-
-sd.pause()
+# smile(50, 50, sd.COLOR_DARK_ORANGE)
+# for _ in range(100):
+#     coordinate_x = random.randint(0, 1200)
+#     coordinate_y = random.randint(0, 600)
+#     smile(coordinate_x=coordinate_x, coordinate_y=coordinate_y, color=sd.random_color())
+#
+# sd.pause()

@@ -33,34 +33,34 @@ print(snowflakes)
 
 # sd.snowflake(center=point_0, length=200, factor_a=0.5)
 
-
-y = sd.random_number(500, 600)
-x = sd.random_number(0,1000)
-
-y2 = sd.random_number(500, 600)
-x2 = sd.random_number(0,1000)
-sd.start_drawing()
-for length in snowflakes:
-
+def snow():
     y = sd.random_number(500, 600)
-    x = sd.random_number(0, 1000)
-    while y > 10:
-        # sd.clear_screen()
-        delta_x = sd.random_number(-7, 7)
-        point = sd.get_point(x, y)
-        sd.snowflake(center=point, length=length)
-        # sd.sleep(0.01)
-        # y -= 1
-        sd.snowflake(center=point, length=length, color=sd.background_color)
-        y -= 1
-        if y <=10:
+    x = sd.random_number(0,1000)
+
+    y2 = sd.random_number(500, 600)
+    x2 = sd.random_number(0,1000)
+    sd.start_drawing()
+    for length in snowflakes:
+
+        y = sd.random_number(500, 600)
+        x = sd.random_number(0, 1000)
+        while y > 10:
+            # sd.clear_screen()
+            delta_x = sd.random_number(-7, 7)
+            point = sd.get_point(x, y)
             sd.snowflake(center=point, length=length)
-            break
-        x += delta_x
-        sd.finish_drawing()
-        # sd.sleep(0.01)
-        if sd.user_want_exit():
-            break
+            # sd.sleep(0.01)
+            # y -= 1
+            sd.snowflake(center=point, length=length, color=sd.background_color)
+            y -= 1
+            if y <=10:
+                sd.snowflake(center=point, length=length)
+                break
+            x += delta_x
+            sd.finish_drawing()
+            # sd.sleep(0.01)
+            if sd.user_want_exit():
+                break
 
 
 
@@ -86,7 +86,7 @@ for length in snowflakes:
 #         break
 
 
-sd.pause()
+
 
 # подсказка! для ускорения отрисовки можно
 #  - убрать clear_screen()
