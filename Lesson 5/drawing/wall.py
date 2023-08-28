@@ -29,8 +29,8 @@ def brick_wall():
         y2 += 100
 
 
-
-# brick_wall()
+brick_wall()
+sd.pause()
 
 
 
