@@ -133,4 +133,17 @@ hour = 0
 
 while piter.content < TOTAL_CARGO:
     hour += 1
+    cprint('---------- Час {} ----------'.format(hour), color='red')
+    truck_1.act()
+    truck_2.act()
+    loader_1.act()
+    loader_2.act()
+    moscow.act()
+    piter.act()
+    cprint(truck_1, color='cyan')
+    cprint(truck_2, color='cyan')
+    cprint(loader_1, color='cyan')
+    cprint(loader_2, color='cyan')
+    cprint(moscow, color='cyan')
+    cprint(piter, color='cyan')
 
