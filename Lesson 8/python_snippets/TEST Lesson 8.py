@@ -52,6 +52,7 @@ class Warehouse:
 
     def truck_arrived(self, truck):
         self.queue_in.append(truck)
+        truck.place = self
         print('{} прибыл грузовик {} '.format(self.name, truck))
 
     def get_next_truck(self):
@@ -81,7 +82,7 @@ class Veicle:
 
     def tank_up(self):
         self.fuel += 1000
-        return '{} заправился'.format(self.model)
+        print('{} заправился'.format(self.model))
 
 
 
@@ -104,8 +105,7 @@ class Truck(Veicle):
             self.distance_to_target -= self.velocity
             print('{} едет по дороге, осталось {} '.format(self.model, self.distance_to_target))
         else:
-            self.place = self.place.end
-            self.place.truck_arrived(self)
+            self.place.end.truck_arrived(self)
             print('{} приехал'.format(self.model))
 
     def go_to(self, road):
